@@ -55,3 +55,11 @@ class Snake:
 		snake.penup()
 		snake.goto(position)
 		self.snake_body.append(snake)
+
+
+	def reset(self):
+		for segment in self.snake_body:
+			segment.hideturtle()
+		self.snake_body.clear()
+		self.create_snake()
+		self.head = self.snake_body[0]
